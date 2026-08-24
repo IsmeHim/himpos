@@ -1822,3 +1822,65 @@ nav {
     order: -1;
   }
 }
+@media (max-width: 680px) {
+  .app-shell .topbar {
+    gap: 8px;
+  }
+  .app-shell .top-actions {
+    gap: 7px;
+  }
+  .app-shell .theme-toggle,
+  .app-shell .circle-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .app-shell .page-heading .primary-btn {
+    width: 100%;
+  }
+  .app-shell .stat-grid {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .dashboard-grid {
+    gap: 10px;
+  }
+  .app-shell .panel {
+    padding: 16px;
+  }
+  .app-shell .table-grid {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .menu-admin-grid {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .order-columns {
+    grid-template-columns: 1fr;
+  }
+  .app-shell .order-table {
+    overflow-x: auto;
+  }
+  .app-shell .order-row {
+    min-width: 650px;
+  }
+  .app-shell .inline-form,
+  .app-shell .menu-form {
+    padding: 12px;
+  }
+  .app-shell .form-actions .outline-btn,
+  .app-shell .form-actions .primary-btn {
+    width: 100%;
+  }
+  .app-shell .toolbar {
+    gap: 10px;
+  }
+  .app-shell .filter-tabs {
+    width: 100%;
+    padding-bottom: 3px;
+  }
+  .app-shell .toolbar > .outline-btn {
+    width: 100%;
+    margin-top: 0;
+  }
+  .app-shell .menu-admin-card {
+    min-width: 0;
+  }
+}
