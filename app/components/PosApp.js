@@ -50,6 +50,7 @@ function mediaFor(item) {
 export default function PosApp() {
   const [active, setActive] = useState("ภาพรวม");
   const [customerMode, setCustomerMode] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [data, setData] = useState(emptyData);
   const [loading, setLoading] = useState(true);
@@ -134,7 +135,8 @@ export default function PosApp() {
 
   return (
     <main className={`app-shell${darkMode ? " dark" : ""}`}>
-      <aside className="sidebar">
+      {mobileMenuOpen && <button className="mobile-menu-backdrop" aria-label="ปิดเมนู" onClick={() => setMobileMenuOpen(false)} />}
+      <aside className={`sidebar${mobileMenuOpen ? " mobile-open" : ""}`}>
         <div className="brand">
           <div className="brand-mark">H</div>
           <div><strong>HIM<span>POS</span></strong><small>Restaurant OS</small></div>
@@ -142,7 +144,7 @@ export default function PosApp() {
         <div className="store-status"><i /> {data.store.name} <span>⌄</span></div>
         <nav>
           {navItems.map(([label, icon]) => (
-            <button className={active === label ? "nav-item active" : "nav-item"} onClick={() => setActive(label)} key={label}>
+              <button className={active === label ? "nav-item active" : "nav-item"} onClick={() => { setActive(label); setMobileMenuOpen(false); }} key={label}>
               <Icon>{icon}</Icon>{label}
               {label === "ออเดอร์" && pendingOrders > 0 && <b>{pendingOrders}</b>}
             </button>
@@ -156,6 +158,7 @@ export default function PosApp() {
 
       <section className="workspace">
         <header className="topbar">
+          <button className="mobile-menu-btn" onClick={() => setMobileMenuOpen(true)} aria-label="เปิดเมนูนำทาง">☰</button>
           <div className="mobile-brand">HIM<span>POS</span></div>
           <div className="search"><Icon>⌕</Icon><input placeholder="ค้นหาออเดอร์, เมนู หรือโต๊ะ..." /></div>
           <div className="top-actions">

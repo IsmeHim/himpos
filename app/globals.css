@@ -503,6 +503,10 @@ nav {
 .mobile-brand {
   display: none;
 }
+.mobile-menu-btn,
+.mobile-menu-backdrop {
+  display: none;
+}
 .content {
   padding: 34px 39px 60px;
   max-width: 1450px;
@@ -1823,6 +1827,47 @@ nav {
   }
 }
 @media (max-width: 680px) {
+  .app-shell .mobile-menu-btn {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #eee3db;
+    border-radius: 9px;
+    background: #fff;
+    color: #706861;
+    font-size: 19px;
+    line-height: 1;
+  }
+  .app-shell.dark .mobile-menu-btn {
+    background: #332b27;
+    border-color: #55483f;
+    color: #f5eee8;
+  }
+  .app-shell .mobile-menu-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 30, 27, 0.45);
+  }
+  .app-shell .sidebar {
+    position: fixed;
+    inset: 0 auto 0 0;
+    z-index: 30;
+    display: flex;
+    width: min(280px, 86vw);
+    height: 100dvh;
+    transform: translateX(-105%);
+    transition: transform 0.22s ease;
+    box-shadow: 12px 0 35px rgba(33, 30, 27, 0.18);
+  }
+  .app-shell .sidebar.mobile-open {
+    transform: translateX(0);
+  }
   .app-shell .topbar {
     gap: 8px;
   }
