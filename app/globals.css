@@ -1936,3 +1936,80 @@ nav {
     min-width: 0;
   }
 }
+
+/* Dark mode contrast */
+.app-shell.dark .stat-icon {
+  background: rgba(242, 123, 80, 0.16);
+  color: #ffad8e;
+  border: 1px solid rgba(242, 123, 80, 0.28);
+}
+.app-shell.dark .text-btn,
+.app-shell.dark .demo-link {
+  color: #ffad8e;
+}
+.app-shell.dark .text-btn:hover,
+.app-shell.dark .demo-link:hover {
+  color: #ffd0bc;
+}
+.app-shell.dark .select-btn,
+.app-shell.dark .outline-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: #6a554a;
+  color: #e9ddd5;
+}
+.app-shell.dark .select-btn:hover,
+.app-shell.dark .outline-btn:hover {
+  background: rgba(242, 123, 80, 0.13);
+  border-color: #f27b50;
+  color: #ffb397;
+}
+.app-shell.dark .mini-table {
+  background: rgba(98, 196, 156, 0.1);
+  border-color: rgba(98, 196, 156, 0.42);
+}
+.app-shell.dark .mini-table.busy {
+  background: rgba(242, 123, 80, 0.1);
+  border-color: rgba(242, 123, 80, 0.46);
+}
+.app-shell.dark .mini-table.bill {
+  background: rgba(226, 111, 111, 0.1);
+  border-color: rgba(226, 111, 111, 0.46);
+}
+.app-shell.dark .table-pill {
+  background: rgba(242, 123, 80, 0.16);
+  color: #ffb397;
+  border: 1px solid rgba(242, 123, 80, 0.3);
+}
+.app-shell.dark .status {
+  background: rgba(242, 123, 80, 0.14);
+  color: #ffb397;
+  border: 1px solid rgba(242, 123, 80, 0.3);
+}
+.app-shell.dark .status.preparing {
+  background: rgba(112, 157, 255, 0.15);
+  color: #a9c2ff;
+  border-color: rgba(112, 157, 255, 0.38);
+}
+.app-shell.dark .status.payment {
+  background: rgba(239, 126, 126, 0.15);
+  color: #ffadad;
+  border-color: rgba(239, 126, 126, 0.38);
+}
+.app-shell.dark .order-card-bottom button {
+  background: transparent;
+  color: #ffbd9f;
+  border: 1px solid rgba(242, 123, 80, 0.62);
+  box-shadow: 0 0 0 1px rgba(242, 123, 80, 0.08), 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+.app-shell.dark .order-card-bottom button:hover {
+  background: rgba(242, 123, 80, 0.2);
+  color: #ffe0d2;
+  border-color: #ff9a75;
+}
+.app-shell.dark .chart-area .grid-line {
+  border-color: rgba(233, 221, 213, 0.14);
+}
+.app-shell.dark .chart-y,
+.app-shell.dark .chart-x {
+  color: #a99e96;
+}
