@@ -138,6 +138,13 @@
 .customer-page .category-scroll {
   gap: 10px;
   padding: 6px 2px 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.customer-page .category-scroll::-webkit-scrollbar {
+  display: none;
 }
 .customer-page .category-scroll button {
   min-height: 44px;
