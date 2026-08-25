@@ -1936,6 +1936,28 @@ nav {
     min-width: 0;
   }
 }
+.customer-page .food-info h3 {
+  margin: 7px 0 6px;
+  min-height: 43px;
+  color: #2b2521;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.35;
+  white-space: normal;
+}
+.customer-page .food-info p {
+  font-size: 11px;
+  line-height: 1.45;
+}
+.customer-page.dark .food-info h3 {
+  color: #fff8f2;
+}
+@media (max-width: 680px) {
+  .customer-page .food-info h3 {
+    font-size: 15px;
+    min-height: 41px;
+  }
+}
 
 /* Dark mode contrast */
 .app-shell.dark .stat-icon {
